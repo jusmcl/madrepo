@@ -1,14 +1,16 @@
-import Paddle from '/src/paddle.js';
+import Paddle from 'paddle.js';
 
 let canvas = document.getElementById('gameScreen');
-let context = canvas.getContext('2d');
+let ctx = canvas.getContext('2d');
 
-const GAME_WIDTH = 800;
-const GAME_HEIGHT = 600;
+const GAME_WIDTH = 1200;
+const GAME_HEIGHT = 800;
 
-context.clearRect(0, 0, 800, 600);
-context.fillStyle = '#ff0000'
+
+
+ctx.clearRect(0, 0, GAME_WIDTH, GAME_HEIGHT);
+ctx.fillStyle = 'black';
 
 
 let paddle = new Paddle(GAME_WIDTH, GAME_HEIGHT);
-paddle.draw(context);
+paddle.draw(ctx);
